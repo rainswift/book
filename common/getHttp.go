@@ -26,6 +26,7 @@ func GetHttp(url string) (*goquery.Document, error) {
 	}
 	fmt.Println(resp.StatusCode)
 	if resp.StatusCode != http.StatusOK {
+		fmt.Println("错误")
 		return nil, fmt.Errorf("Error: StatusCode is %d\n", resp.StatusCode)
 	}
 
